@@ -98,7 +98,7 @@
 </template>
 
 <script lang="ts">
-  import Modal from '../components/Modal';
+  import Modal from '../components/Modal.vue';
   
   export default {
     components: {
@@ -115,7 +115,13 @@
     computed: {
       priceAlert() {
         const array = this.$store.getters.alerts;
-        let obj = {};
+        let obj = {
+          name: '',
+          symbol: '',
+          price: 0,
+          alert: 0,
+          edit: false
+        };
 
         if (array.length > 0) {
           const filtered = array.filter(x => x.symbol == this.$route.params.id);

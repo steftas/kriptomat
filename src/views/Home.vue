@@ -10,7 +10,7 @@
 
 <script lang="ts">
   import {mapActions} from 'vuex';
-  import Box from '../components/Box';
+  import Box from '../components/Box.vue';
 
   export default {
     components: {
